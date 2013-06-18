@@ -611,7 +611,7 @@
 							}
 
 						} ) :
-						this._applyTransition( $item, { opacity : 0 }, this.options.otherPileAnimation.closeSpeed );
+						this._applyTransition( $item, { opacity : 0, visibility: 'hidden' }, this.options.otherPileAnimation.closeSpeed );
 
 				}
 
@@ -697,7 +697,7 @@
 								self.options.onAfterClose( $el.data( 'pileName' ), cnt );
 							}
 
-						} ) : this._applyTransition( $item, { opacity : 1 }, this.options.otherPileAnimation.openSpeed, function( evt ) {
+						} ) : this._applyTransition( $item, { opacity : 1, visibility: 'visible' }, this.options.otherPileAnimation.openSpeed, function( evt ) {
 
 							var target = this.target || this.nodeName;
 							if( target !== 'LI' ) {
